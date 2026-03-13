@@ -50,11 +50,14 @@ where CAR_NO = '12가1234';
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
 만약 아래와 같이 결과가 나온다면 인덱스를 잘 활용한 것이다.
 
+```text
+------------------------------------------------------------------------------------
 | Id  | Operation                    | Name              | Rows  | Cost |  Pstart |
 ------------------------------------------------------------------------------------
 |   0 | SELECT STATEMENT             |                   |     1 |   12 |         |
 |   1 |  TABLE ACCESS BY INDEX ROWID | PAYMENT_HISTORY   |     1 |   12 |         |
 |   2 |   INDEX RANGE SCAN           | IDX_PAYMENT_CARNO |     1 |    2 |         |
+------------------------------------------------------------------------------------
 
 INDEX RANGE SCAN이 보이면 인덱스가 정상적으로 탐색됨
 
