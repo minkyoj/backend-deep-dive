@@ -58,6 +58,7 @@ SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
 |   1 |  TABLE ACCESS BY INDEX ROWID | PAYMENT_HISTORY   |     1 |   12 |         |
 |   2 |   INDEX RANGE SCAN           | IDX_PAYMENT_CARNO |     1 |    2 |         |
 ------------------------------------------------------------------------------------
+```
 
 INDEX RANGE SCAN이 보이면 인덱스가 정상적으로 탐색됨
 
