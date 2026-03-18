@@ -48,6 +48,7 @@ DB 접근을 줄이고 성능을 개선
 ```bash
 SET user:1 "mingyo"
 GET user:1
+```
 
 ## Hash
 
@@ -56,6 +57,7 @@ GET user:1
 ```bash
 HSET user:1 name "mingyo" age 30
 HGET user:1 name
+```
 
 ## List
 
@@ -64,12 +66,14 @@ HGET user:1 name
 ```bash
 LPUSH queue "task1"
 RPUSH queue "task2"
+```
 
 ## Set
 
 ```bash
 SADD users "a" "b" "c"
 SMEMBERS users
+```
 
 ## Sorted Set (ZSet)
 
@@ -79,6 +83,7 @@ SMEMBERS users
 ZADD ranking 100 "user1"
 ZADD ranking 200 "user2"
 ZRANGE ranking 0 -1 WITHSCORES
+```
 
 # 4. 캐싱 전략
 Cache Aside (Lazy Loading)
@@ -111,6 +116,7 @@ Redis에 먼저 저장 후 나중에 DB 반영
 ```bash
 SET key value EX 60
   TTL 설정 안 하면 메모리 계속 증가
+```
 
 - 5.2 캐시 스탬피드 (Cache Stampede)
 
